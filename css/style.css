@@ -898,6 +898,8 @@ a:focus {
 }
 
 
+
+
 /*******************************/
 /********* Service CSS *********/
 /*******************************/
@@ -2271,7 +2273,7 @@ a:focus {
 
 .footer .footer-contact,
 .footer .footer-link,
-.footer .newsletter {
+.footer .footer-cta {
     position: relative;
     margin-bottom: 45px;
 }
@@ -2349,66 +2351,40 @@ a:focus {
     color: #030f27;
 }
 
-.footer .newsletter .form {
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto;
+/* Footer CTA Styles */
+.footer .footer-cta .cta-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
 }
 
-.footer .newsletter input {
-    height: 50px;
-    border: 2px solid #121518;
-    border-radius: 0;
+.footer .footer-cta .cta-icon {
+    margin-right: 15px;
+    margin-top: 5px;
 }
 
-.footer .newsletter .btn {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 40px;
-    padding: 8px 10px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
+.footer .footer-cta .cta-icon i {
+    font-size: 30px;
     color: #F08080;
-    background: #121518;
-    border-radius: 0;
-    border: 2px solid #F08080;
+}
+
+.footer .footer-cta .cta-text a {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 3px;
     transition: .3s;
 }
 
-.footer .newsletter .btn:hover {
-    color: #121518;
-    background: #F08080;
-}
-
-.footer .footer-menu .f-menu {
-    position: relative;
-    padding: 15px 0;
-    font-size: 0;
-    text-align: center;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-    border-bottom: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .footer-menu .f-menu a {
-    color: #ffffff;
-    font-size: 16px;
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
-}
-
-.footer .footer-menu .f-menu a:hover {
+.footer .footer-cta .cta-text a:hover {
     color: #F08080;
 }
 
-.footer .footer-menu .f-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
+.footer .footer-cta .cta-text p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
-
 
 .footer .copyright {
     padding: 30px 15px;
@@ -2433,10 +2409,115 @@ a:focus {
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .footer .footer-cta .cta-icon i {
+        font-size: 25px;
+    }
+    
+    .footer .footer-cta .cta-text a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer {
+        padding-top: 60px;
+    }
+    
+    .footer .footer-contact,
+    .footer .footer-link,
+    .footer .footer-cta {
+        margin-bottom: 30px;
+    }
+    
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
         text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-cta .cta-item {
+        flex-direction: column;
+    }
+    
+    .footer .footer-cta .cta-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/* CTA Button Styles */
+.cta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.cta-icon {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-right: 15px;
+}
+
+.cta-icon i {
+    font-size: 30px;
+    color: #F08080;
+}
+
+.cta-btn {
+    white-space: nowrap; /* Prevent button text from wrapping */
+    display: inline-block;
+    padding: 8px 25px;
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    margin-top: 20px;
+}
+
+.whatsapp-btn img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .cta-icon i {
+        font-size: 25px;
+    }
+    .cta-btn {
+        padding: 7px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cta-item {
+        margin-bottom: 10px;
+    }
+    .cta-icon i {
+        font-size: 22px;
+    }
+    .cta-icon {
+        margin-right: 10px;
+    }
+    .cta-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    .whatsapp-btn img {
+        max-width: 180px;
     }
 }
