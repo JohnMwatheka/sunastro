@@ -773,18 +773,18 @@ a:focus {
 .fact {
     position: relative;
     width: 100%;
-    padding: 45px 0;
+    padding: 30px 0;
 }
 
-.fact .col-6 {
-    display: flex;
+.fact .fact-item {
     align-items: flex-start;
+    height: 100%;
 }
 
 .fact .fact-icon {
     position: relative;
-    margin: 7px 15px 0 15px;
-    width: 60px;
+    margin: 0 15px 0 0;
+    min-width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -792,8 +792,8 @@ a:focus {
 
 .fact .fact-icon [class^="flaticon-"]::before {
     margin: 0;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 50px;
+    line-height: 50px;
     background-image: linear-gradient(#ffffff, #F08080);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -805,13 +805,14 @@ a:focus {
 
 .fact .fact-left,
 .fact .fact-right {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 40px 20px;
 }
 
 .fact .fact-text h2 {
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 5px;
 }
 
 .fact .fact-text p {
@@ -833,6 +834,67 @@ a:focus {
 
 .fact .fact-left h2 {
     color: #F08080;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199.98px) {
+    .fact .fact-text h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .fact .fact-left,
+    .fact .fact-right {
+        padding: 30px 15px;
+    }
+    
+    .fact .fact-icon {
+        min-width: 45px;
+    }
+    
+    .fact .fact-icon [class^="flaticon-"]::before {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    
+    .fact .fact-text h2 {
+        font-size: 22px;
+    }
+    
+    .fact .fact-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .fact .fact-left,
+    .fact .fact-right {
+        padding: 25px 15px;
+    }
+    
+    .fact .col-sm-6 {
+        margin-bottom: 20px;
+    }
+    
+    .fact .col-sm-6:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .fact .fact-text h2 {
+        font-size: 20px;
+    }
+    
+    .fact .fact-icon {
+        min-width: 40px;
+    }
+    
+    .fact .fact-icon [class^="flaticon-"]::before {
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 
 
