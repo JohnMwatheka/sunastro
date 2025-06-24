@@ -39,7 +39,7 @@ a:focus {
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #dce0e4, #dee2e6, #eaedf0);
 }
 
 .back-to-top {
@@ -642,21 +642,43 @@ a:focus {
 }
 
 
-/*******************************/
-/********* Feature CSS *********/
-/*******************************/
+/* Why Choose Us Section */
 .feature {
     position: relative;
     margin-bottom: 45px;
 }
 
-.feature .col-md-12 {
-    background: #030f27;
+.feature .section-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
-    
-.feature .col-md-12:nth-child(2n) {
+
+.feature .section-header p {
+    color: #F08080;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.feature .section-header h2 {
     color: #030f27;
-    background: #F08080;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature .feature-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.feature .feature-col {
+    padding: 0 15px;
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 
 .feature .feature-item {
@@ -665,6 +687,12 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background: #030f27;
+}
+
+.feature .feature-item:nth-child(2n) {
+    color: #030f27;
+    background: #F08080;
 }
 
 .feature .feature-icon {
@@ -699,7 +727,7 @@ a:focus {
     z-index: 2;
 }
 
-.feature .col-md-12:nth-child(2n) .feature-icon::after {
+.feature .feature-item:nth-child(2n) .feature-icon::after {
     background: #F08080;
 }
 
@@ -710,6 +738,10 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
+}
+
+.feature .feature-item:nth-child(2n) [class^="flaticon-"]::before {
+    color: #030f27;
 }
 
 .feature .feature-text {
@@ -723,6 +755,10 @@ a:focus {
     font-weight: 600;
 }
 
+.feature .feature-item:nth-child(2n) h3 {
+    color: #030f27;
+}
+
 .feature .feature-text p {
     margin: 0;
     color: #F08080;
@@ -730,12 +766,82 @@ a:focus {
     font-weight: 400;
 }
 
-.feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
-.feature .col-md-12:nth-child(2n) h3,
-.feature .col-md-12:nth-child(2n) p {
+.feature .feature-item:nth-child(2n) p {
     color: #030f27;
 }
 
+/* New Icons Specific Styles */
+.feature .feature-icon .flaticon-medal::before {
+    font-size: 50px;
+}
+
+.feature .feature-icon .flaticon-innovation::before {
+    font-size: 50px;
+}
+
+.feature .feature-icon .flaticon-teamwork::before {
+    font-size: 50px;
+}
+
+.feature .feature-icon .flaticon-sustainability::before {
+    font-size: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .feature .feature-col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .feature .feature-item {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .feature .section-header h2 {
+        font-size: 30px;
+    }
+    
+    .feature .feature-text h3 {
+        font-size: 22px;
+    }
+    
+    .feature .feature-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .feature .feature-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .feature .feature-item {
+        min-height: auto;
+        padding: 20px;
+    }
+    
+    .feature .feature-icon {
+        width: 50px;
+    }
+    
+    .feature .feature-icon::before,
+    .feature .feature-icon::after {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .feature .feature-icon [class^="flaticon-"]::before {
+        font-size: 50px;
+    }
+    
+    .feature .feature-text {
+        padding-left: 20px;
+    }
+}
 
 /*******************************/
 /********** About CSS **********/
@@ -2431,6 +2537,178 @@ a:focus {
     list-style-type: none;
 }
 
+/* Contact Info Section */
+.contact-info {
+    position: relative;
+    padding: 60px 0;
+}
+
+.contact-info .container {
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+}
+
+.contact-info .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #010b18;
+}
+
+.contact-info .section-header h2 {
+    color: #030f27;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contact-info .section-header h2::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 3px;
+    left: 50%;
+    bottom: -15px;
+    background: #F08080;
+    transform: translateX(-50%);
+}
+
+.contact-info .contact-details,
+.contact-info .opening-hours {
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.contact-info h3 {
+    color: #030f27;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contact-info h3::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #F08080;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-info i {
+    color: #F08080;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+.contact-info .col-md-6 {
+    background-color: none;
+}
+
+.contact-info .cta-buttons {
+    margin-top: 30px;
+}
+
+.contact-info .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-info .btn-primary {
+    background: #030f27;
+    border-color: #030f27;
+}
+
+.contact-info .btn-primary:hover {
+    background: #F08080;
+    border-color: #F08080;
+    color: #030f27;
+}
+
+.contact-info .btn-secondary {
+    background: #F08080;
+    border-color: #F08080;
+    color: #030f27;
+}
+
+.contact-info .btn-secondary:hover {
+    background: #030f27;
+    border-color: #030f27;
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .contact-info {
+        padding: 45px 0;
+    }
+    
+    .contact-info .container {
+        padding: 30px;
+    }
+    
+    .contact-info .section-header h2 {
+        font-size: 32px;
+    }
+    
+    .contact-info h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-info .contact-details,
+    .contact-info .opening-hours {
+        margin-bottom: 30px;
+    }
+    
+    .contact-info .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .contact-info .cta-buttons {
+        text-align: center;
+    }
+    
+    .contact-info .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-info {
+        padding: 30px 0;
+    }
+    
+    .contact-info .container {
+        padding: 20px;
+    }
+    
+    .contact-info .section-header h2 {
+        font-size: 26px;
+    }
+    
+    .contact-info h3 {
+        font-size: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 15px;
+    }
+}
 
 /*******************************/
 /********* Footer CSS **********/
