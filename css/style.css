@@ -151,8 +151,11 @@ a:focus {
 }
 
 .top-bar-cta:hover {
-    background-color: #030f27;
+    background-color: #F08080;
     color: white !important;
+    border-color: white;
+    transition: all 0.3s;
+    
 }
 
 .top-bar-icon i {
@@ -535,7 +538,6 @@ a:focus {
     margin-top: 0;
     padding: 90px 0;
     text-align: center;
-    background: #ffffff;
 }
 
 .page-header h2 {
@@ -565,7 +567,7 @@ a:focus {
 }
 
 .page-header a:hover {
-    color: #ffffff;
+    color: #e95b5b;
 }
 
 .page-header a::after {
